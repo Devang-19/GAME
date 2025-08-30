@@ -9,21 +9,19 @@ comp_score = 0
 count = 5
 
 for i in range(count):
-    print("Attempt : " + str(i+1) + " of " + str(count))
+    print("Attempt : " ,i+1 ," of " ,count)
     user_choice = int(input("Enter Your Choice : "))
     if user_choice not in [1,2,3,]:
         print("Invalid Choice !!!")
 
     user_pick = choice[user_choice - 1]
-    comp_pick = random.choice(choice)
+    comp_pick = random.choice(choice) 
     print("You chose: " + user_pick)
     print("Computer chose: " + comp_pick)
 
     if (user_pick == comp_pick):
         print("Result : TIE !!!")
-    elif (user_pick == "rock" and comp_pick == "scissors") or \
-         (user_pick == "paper" and comp_pick == "rock") or \
-         (user_pick == "scissors" and comp_pick == "paper"):
+    elif (user_pick == "rock" and comp_pick == "scissor") or (user_pick == "paper" and comp_pick == "rock") or (user_pick == "scissor" and comp_pick == "paper"):
         print("Result: You Win this round!")
         user_score += 1
     else:
